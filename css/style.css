@@ -1,0 +1,479 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Nanum+Brush+Script&family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+/* font-family: 'Abel', sans-serif;
+font-family: 'Nanum Brush Script', cursive;
+font-family: 'Nanum Gothic', sans-serif; */
+
+
+/* 레이아웃 */
+
+body {
+    background: url(https://p4.wallpaperbetter.com/wallpaper/611/271/614/landscape-river-boat-picture-wallpaper-preview.jpg) repeat-x center top;
+    background-size: 100% 327px;
+}
+
+#header {
+    height: 327px;
+}
+
+#nav {
+    background-color: #f6fdff;
+}
+
+#title {
+    background-color: #eaf7fd;
+}
+
+main {}
+
+/* contents */
+
+#contents {}
+
+#contents .container {
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    box-sizing: border-box
+}
+
+#contents #cont_left {
+    float: left;
+    width: 250px;
+}
+
+#contents #cont_center {
+    float: left;
+    width: calc(100% - 500px);
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    box-sizing: border-box
+}
+
+#contents #cont_right {
+    float: left;
+    width: 250px;
+}
+
+/* container */
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* header */
+
+.header {
+    
+}
+
+.header .header_menu {
+    text-align: right;
+}
+
+.header .header_menu a {
+    color: #fff;
+    display: inline-block;
+    padding: 8px 0 0 10px;
+}
+
+.header .header_menu a:hover {
+    color: #ccc;
+}
+
+.header .header_tit {
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+    text-transform: uppercase;
+}
+
+.header .header_tit h1 {
+    color: #fff;
+    display: inline-block;
+    padding: 5px 30px;
+    background-color: #bac0b9;
+    letter-spacing: 2px;
+    margin-top: 55px;
+    font-weight: 800;
+    transition: 0.3s ease-in-out;
+}
+
+.header .header_tit h1:hover {
+    box-shadow: inset 137px 0 #748072,
+        inset -136px 0 #748072;
+}
+
+.header .header_tit a {
+    color: #fff;
+    background-color: #c2d2ca;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: -7px;
+    transition: 0.3s ease-in-out;
+}
+
+.header .header_tit a:hover {
+    box-shadow: inset 63px 0px #85a494, inset -62px 0px #85a494;
+}
+
+/* header icon */
+
+.header .header_icon {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.header .header_icon ul {}
+
+.header .header_icon ul li {
+    display: inline;
+    margin: 5px;
+}
+
+.header .header_icon ul li a {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 35px;
+    width: 60px;
+    height: 60px;
+    background-color: #c3c8d8;
+    border-radius: 50%;
+    line-height: 62px;
+}
+
+.header .header_icon ul li a i {}
+
+.header .header_icon ul li a span {
+    position: absolute;
+    top: -34px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    background-color: #c3c8d8;
+    line-height: 1.2;
+    padding: 3px 9px;
+    border-radius: 6px 0;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.header .header_icon ul li:hover a span {
+    top: -30px;
+    opacity: 1;
+}
+
+.header .header_icon ul li a span::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 43%;
+    border: 5px solid #c3c8d8;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+/* nav 전체 메뉴 */
+
+.nav {
+    display: none;
+    padding: 25px 0;
+}
+
+.nav>div {
+    float: left;
+    width: 40%;
+}
+
+.nav>div:last-child {
+    width: 20%;
+}
+
+.nav>div h3 {
+    font-size: 18px;
+    color: #748072;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.nav>div ul {
+    overflow: hidden;
+}
+
+.nav>div ul li {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding-left: 8px;
+    box-sizing: border-box;
+}
+
+.nav>div ul li::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: #748072;
+    left: 0;
+    top: 9px;
+}
+
+.nav>div:last-child ul li {
+    width: 100%;
+}
+
+.nav>div ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #25a2d0;
+    transition: 0.5s;
+}
+
+.nav>div ul li:hover a:after {
+    width: 65%;
+}
+
+/* 타이틀 */
+
+.tit {
+    position: relative;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.tit h2 {
+    font-family: 'Nanum Brush Script', cursive;
+    font-size: 39px;
+    color: #0093bd;
+}
+
+.tit .btn {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #3192bf;
+    color: #fff;
+    font-size: 35px;
+    line-height: 64px;
+}
+
+.tit .btn i {}
+
+/* 컨텐츠 영역 */
+
+.column {
+    padding: 15px;
+    border-bottom: 1px solid #dbdbdb;
+}
+.column .col_tit {
+    font-size: 20px;
+    color: #2f7fa6;
+    padding: 5px;
+}
+.column .col_desc {
+    color: #878787;
+    border-bottom: 1px dashed #dbdbdb;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.column.col3 {
+    border-bottom: none;
+}
+.column.col6 {
+    border-bottom: none;
+}
+.column.col9 {
+    border-bottom: none;
+}
+
+/* 메뉴 */
+
+.menu {}
+.menu ul {}
+.menu ul li {}
+.menu ul li a {
+    position: relative;
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    color: #878787;
+    text-transform: uppercase;
+    border-bottom: 1px solid #dbdbdb;
+    transition: 0.5s;
+}
+
+.menu ul li a:hover {
+    background-color: rgba(26, 130, 174, 0.9);
+    color: #fff;
+    box-shadow: inset 180px 0 rgba(36, 130, 170, 0.7);
+}
+
+.menu ul li a i {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+/* 이미지 슬라이드 col4 */
+
+.slider {}
+.slider div {}
+.slider div figure {
+    position: relative;
+}
+.slider div figure img {}
+.slider div figure figcaption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%; /* //글자가 없는 공간도 색깔이 나오게 */
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+
+}
+.slider div figure figcaption em {
+    font-family: 'Abel', sans-serif;
+}
+.slider div figure figcaption span {
+    display: block; /* //밑으로 떨어지게 */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+.slider .slick-arrow {
+    position: absolute;
+    transform: translateY(-50%);
+    z-index: 30;
+    /* //폰트어썸의 i태그에서 뽑아내기 */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 0;
+    visibility: hidden; /* <- 1)하얀배경없애고 */
+    color: #fff;
+}
+
+.slider .slick-prev {
+    left: 0;
+    top: 50%;
+}
+
+.slider .slick-prev::before {
+    content: "\f104"; /* <-폰트어썸 홈페이지에서 개발자모드로 뽑아내기 */
+    font-size: 30px;
+    visibility: visible; /* <- 2)폰트어썸만 살리기 */
+}
+
+.slider .slick-next {
+    right: 0;
+    top: 50%;
+}
+
+.slider .slick-next::before {
+    content: "\f105";
+    font-size: 30px;
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------
+--------------미디어------------------
+------------------------------------- */
+
+@media (max-width:1220px) {
+    .container {
+        width: 100%;
+    }
+
+    .row {
+        padding: 0 15px;
+    }
+
+    .header .header_menu {
+        padding-right: 15px;
+    }
+
+    .tit .btn {
+        right: 5px;
+    }
+}
+
+@media (max-width:1024px) {}
+
+@media (max-width:960px) {
+    
+.nav>div {
+    float: none; /* <-원래 있었던 float left를 없애는 방법 */
+    width: 100%;
+}
+
+.nav>div:last-child {
+    width: 100%;
+}
+
+.nav>div ul li {
+    width: 33.3333%;
+}
+.nav>div:last-child ul li {
+    width: 33.3333%;
+}
+}
+
+@media (max-width:768px) {}
+
+@media (max-width:600px) {
+    #header {
+        height: auto; /* 자식이 가진 공간만큼 잡음 */
+    }
+
+    .header .header_tit {
+        display: none;
+    }
+
+    .header .header_icon {
+        display: none;
+    }
+
+    .tit .btn {
+        display: none;
+    }
+}
+
+@media (max-width:480px) {}
+
+@media (max-width:320px) {}
